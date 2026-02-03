@@ -24,7 +24,7 @@ function showResource(type) {
 
   const info = {
     curriculum:
-      "<h3>MCA Curriculum</h3><p>Includes MERN Stack, AWS Cloud, and AI Ethics.</p>",
+      "<h3>MCA Curriculum</h3><p>Includes MERN Stack, and AI Ethics.</p>",
     labs: "<h3>Tech Labs</h3><p>Equipped with 100+ high-end systems and high-speed fiber internet.</p>",
     placements:
       "<h3>Placement Cell</h3><p>95% placement rate with top MNCs like Zoho and TCS.</p>",
@@ -38,3 +38,4 @@ function showResource(type) {
 function closeResource() {
   document.getElementById("resource-details").classList.add("hidden");
 }
+
