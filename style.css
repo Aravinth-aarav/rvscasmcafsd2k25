@@ -1,49 +1,151 @@
-/* Styling to match your college theme */
+:root {
+  --rvs-maroon: #800000;
+  --rvs-gold: #ffcc00;
+  --dark: #121212;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
-    background-color: #800000; /* Deep Red from your image */
-    color: white;
-    padding: 20px;
+/* Navbar */
+.navbar {
+  background: var(--rvs-maroon);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
 }
 
+/* Ticker */
+.ticker-wrap {
+  background: #333;
+  color: var(--rvs-gold);
+  padding: 10px;
+  overflow: hidden;
+}
+.ticker {
+  white-space: nowrap;
+  animation: move 20s linear infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hero */
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero-btn {
+  background: var(--rvs-gold);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Layout & Grid */
 .container {
-    padding: 50px 20px;
+  width: 85%;
+  margin: auto;
+  padding: 50px 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--rvs-maroon);
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: inline-block;
-    max-width: 400px;
-    width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.card-btn {
+  background: var(--rvs-maroon);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
-button {
-    background-color: #800000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+/* Dynamic Info Box */
+.dynamic-info {
+  background: white;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border-top: 5px solid var(--rvs-maroon);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-button:hover {
-    background-color: #a00000;
-}
-
 .hidden {
-    display: none;
+  display: none;
+}
+.close-info {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
-ul {
-    text-align: left;
-    margin-top: 20px;
+/* Footer */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+.socials i {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: var(--rvs-gold);
+  cursor: pointer;
 }
